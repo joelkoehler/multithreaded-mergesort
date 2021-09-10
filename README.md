@@ -45,3 +45,5 @@ merge sort should be run with 5 threads for all test cases.  Plot the
 timing results in a line chart (google sheets or excel) and compare
 the results. Please discuss whether the threaded version always
 performs better than the serial version.
+
+<img src="images/speedupEf.png">
