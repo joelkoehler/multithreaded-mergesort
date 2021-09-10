@@ -1,11 +1,7 @@
-# Overview
+# Multithreaded Quick Sort
 
-In this project, you will implement a multithreaded version of the
-mergesort algorithm using the pthread library.  We have provided you
-with a single-threaded version of mergesort that you will be
-converting to use threads. Makefiles have been provided that you can
-use directly.
-
+This project implements a multithreaded version of the
+quick sort algorithm using the pthread library.
 
 ## Learning Objectives
 
@@ -13,16 +9,6 @@ use directly.
   to see a performance gain.
 - To gain more experience writing concurrent code.
 - Explore the pthread library
-
-
-## Book references
-
-Read these chapters carefully in order to prepare yourself for this project.
-
-- [Intro to Threads](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf)
-- [Threads API](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-api.pdf)
-- [Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)
-- [Using Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf)
 
 ## Make Concurrent (ABET outcome 1)
 
@@ -73,57 +59,3 @@ HINT: You can make the chart using any tool want (excel, google docs,
 etc.) as long as you can create a pdf as your final
 deliverable. Look in the folder example for what your chart should
 look like.
-
-## Hints
-
-- Do not modify the given serial_mergesort function. Instead create a
-  new parallel_mergesort function that will call serial_mergesort as a
-  base case.
-- You can stop the recursion using the number of levels in the sorting
-  tree or by number of threads. It is simpler to stop it by the number
-  of levels.
-- It may be useful to add an option to mytests.c to output timing
-  results speedup calculation in a CSV format.  This will make it
-  significantly easier to generate the required data for the
-  implementation analysis report.
-
-
-## Grading Rubric
-
-All grading will be executed on onyx.boisestate.edu Submissions
-that fail to compile will not being graded.
-
-- [30 pts] Make concurrent (ABET outcome 1)
-  - [8 pts] You got a speedup of at least 2 with 4 or more cores 
-  - [6 pts] mytests.c accepts a number of threads as a command line argument
-  - [8 pts] Correctly creates new threads
-  - [8 pts] Merge function correctly implements a critical section
-- [30 pts] Implementation analysis (speedup.pdf ABET outcome 6)
-  - Score will reflect the quality of the analysis.
-- [10 pts] Code quality for **lab.c**
-  - [4 pts] Code is formatted correctly and follows a consistent style
-  - [2 pts] Code is commented when necessary
-  - [4 pts] There is more than just the main function in **mytests.c**
-- [15 pts] Compiler warnings **ALL files**
-  - Each compiler warning will result in a 3 point deduction.
-  - You are not allowed to suppress warnings
-  - You must build with the flags ```-Wall -Wextra -Wpointer-arith -Wstrict-prototypes -std=gnu89```
-- [10 pts] Valgrind reports no memory leaks or read/write errors
-  - As reported by **runval.sh**
-  - This is a **PASS/FAIL** score. 1 read/write error or leaking 1
-    byte will result in a zero for this section. There is no partial
-    credit for this section.
-- [5 pts] In the file lab.c you updated the header on lines 2,3, and 4
-
-## Submission
-
-You can make as many commits to your git repository as you want. When
-I grade I will use the top commit as what you are submitting for
-credit.
-
-Pushing your code for grading
-
-- git add lab.c
-- git add mytests.c
-- git commit -am "Finished the lab"
-- git push
