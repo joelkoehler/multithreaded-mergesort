@@ -1,7 +1,7 @@
-# Multithreaded Quick Sort
+# Multithreaded Merge Sort
 
 This project implements a multithreaded version of the
-quick sort algorithm using the pthread library.
+merge sort algorithm using the pthread library.
 
 ## Learning Objectives
 
@@ -54,8 +54,3 @@ merge sort should be run with 5 threads for all test cases.  Plot the
 timing results in a line chart (google sheets or excel) and compare
 the results. Please discuss whether the threaded version always
 performs better than the serial version.
-
-HINT: You can make the chart using any tool want (excel, google docs,
-etc.) as long as you can create a pdf as your final
-deliverable. Look in the folder example for what your chart should
-look like.
