@@ -13,28 +13,19 @@ merge sort algorithm using the pthread library.
 ## Make Concurrent
 
 Convert the serial mergesort code to use multiple threads using the
-pthread library. Your program should limit the number of threads it
+pthread library. It limits the number of threads it
 uses via a command line argument (for example, this could be the total
 number of threads or number of levels before cutting off new thread
 generation). You must get a speedup of at least 2 with 4 or more cores
 to get full credit on this project.  Use n = 100,000,000 elements for
 your testing.
 
-NOTE: Just because you see a speedup of 2 does not guarantee full
-credit. You can easily hardcode the number of threads and hardcode the
-branches to get a speedup of 2. Your code MUST work with a variable
-number of threads!  Simply getting a speedup of 2 does not indicate
-that you did the assignment correctly.
-
-You will need to update mytests.c to accept a number of threads a
-command line argument. The updated version of mytests should include
-timing results for both the serial and parallel versions of merge
-sort.
+mytests.c accepts a number of threads via a command line argument and also includes
+timing results for both the serial and parallel versions of merge sort.
 
 ## Implementation Analysis
 
-Create a file named speedup.pdf (in the root directory) that analyses
-the following two aspects of your mergesort solution.
+speedup.pdf analyses the following two aspects of the mergesort solution.
 
 **Efficiency** - Analyse the thread efficiency by examining how the
 threaded implementation’s performance compares to the single threaded
