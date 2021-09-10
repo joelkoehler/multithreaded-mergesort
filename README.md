@@ -10,7 +10,7 @@ merge sort algorithm using the pthread library.
 - To gain more experience writing concurrent code.
 - Explore the pthread library
 
-## Make Concurrent (ABET outcome 1)
+## Make Concurrent
 
 Convert the serial mergesort code to use multiple threads using the
 pthread library. Your program should limit the number of threads it
@@ -31,7 +31,7 @@ command line argument. The updated version of mytests should include
 timing results for both the serial and parallel versions of merge
 sort.
 
-## Implementation Analysis (ABET outcome 6)
+## Implementation Analysis
 
 Create a file named speedup.pdf (in the root directory) that analyses
 the following two aspects of your mergesort solution.
